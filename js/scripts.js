@@ -25,14 +25,38 @@ const generateToken = (length = 8) => {
     }
     return tabRandom.join('')
     
-}
+};
 
 
 const btn = document.querySelector('button');
+const result = document.querySelector('div')
 
 btn.addEventListener('click', () => {
+    
+    const input = document.querySelector('input').value
 
-document.querySelector('div').innerText = generateToken(20)
+    if(input > 0 ){
+
+        result.innerText = generateToken(input);
+
+    }else {
+        result.innerText = 'Musisz dać inną liczbe ';
+    }
+
+
+
+
+
+
+
+
+
 
 });
+
+
+
+
+
+
 
